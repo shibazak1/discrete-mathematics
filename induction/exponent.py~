@@ -1,0 +1,13 @@
+
+
+def day_required(amount,target_money,earning_percentage):
+
+    new_amount = amount+amount*(earning_percentage)//2
+    if amount==target_money:
+        return amount
+    else:
+        day+=1
+        day_required(new_amount,target_money,earning_percentage)
+    
+
+    

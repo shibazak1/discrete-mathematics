@@ -1,0 +1,8 @@
+
+def binary_search(a,lst):
+
+    middel = (lst[0]+lst[len(lst)-1])
+
+    if a==middel:
+        return "found"
+    elif a>

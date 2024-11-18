@@ -1,0 +1,19 @@
+# function take 2 permutation and return list of neighbor transpostions required
+
+def transform(first ,second):
+
+    transpositions = []
+    for k in range(len(first)):
+        targ_position = second.index(first[k])
+        while first.index(first[k])!=targ_position:
+            first[k] ,first[k+1] = first[k+1],first[k]
+            transpositions.append((k,k+1))
+            print(f"{(k,k+1)} --> {first}")
+            k+=1
+
+    print(transpositions)
+
+
+
+
+transform(["M","A","R","I","N","E"],["A","I","R","M","E","N"])

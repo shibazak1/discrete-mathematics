@@ -1,0 +1,12 @@
+
+
+
+def extend(perm,n):
+    if len(perm)==n:
+        print(perm)
+        return
+    for i in range(n):
+        extend(perm+[i],n)
+
+
+extend([],3)

@@ -1,0 +1,27 @@
+# take list of n object and return true if and only if the permutation is even (require an even number of transpositions )
+
+
+def is_even(perm):
+
+    for k in range(len(perm)):
+        target_index  = perm.index(perm[k])
+        count = 0
+
+        if target_index!=k:
+            perm[k],perm[target_index] = perm[target_index],perm[k]
+            count +=1
+
+
+    if count%2 == 0:
+        return True
+
+
+
+
+
+
+
+
+
+print(is_even([4,0,1,2,3]))
+

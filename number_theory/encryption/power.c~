@@ -1,0 +1,31 @@
+/* 2024/6/20
+   compute the x^n useing recuresion
+   wite it by VIIBUG 
+ */
+#include<stdio.h>
+
+int pow(x,n){
+
+    if(n==1){
+	return x;
+    }
+    else{
+
+	return x*pow(x,n-1);
+    }
+}
+
+
+
+
+
+int main(void){
+
+
+
+    printf("\n%d\n",pow(2,9));
+    
+
+
+    return 0;
+}

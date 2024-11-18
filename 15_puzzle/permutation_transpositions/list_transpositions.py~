@@ -1,0 +1,25 @@
+# a functions take to list of permutations and return the list of transpositions to get from one permutation to other
+
+
+def transform(first,second):
+
+    transpositions = []
+    for i in range(len(first)):
+        for k in range(len(second)):
+            if first[i] == second[k]:
+                transpositions.add((i,k))
+                
+
+    return transpositions
+
+                
+                
+
+
+
+
+
+
+l1 = [a,b,c]
+l2 = [c,b,a]
+print(transform(l1,l2))

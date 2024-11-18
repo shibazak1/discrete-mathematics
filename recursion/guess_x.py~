@@ -1,0 +1,25 @@
+
+def query(y):
+    x=4
+    if y==x:
+        return "equal"
+    elif y>x:
+        return "grater"
+    elif y<x:
+        return "smaller"
+
+
+
+def quess(upper,lower):
+    
+    midel = (upper+lower)/2
+    answer = query(midel)
+    if answer=="equal":
+        return "yes"
+    elif answer=="grater":
+        guess(midel+1,lower)
+    elif answer=="smaller":
+        guess(upper,midel-1)
+
+
+        

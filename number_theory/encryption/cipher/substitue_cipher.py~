@@ -1,0 +1,28 @@
+alpha = 'abcdefghijklmnopqrstuvwxyz'
+#key = 'jsuyfhkpicomxrqatlbvznewgd'
+def substitute(text,substitute_what ,substitute_by):
+
+    result = ""
+    for litter in text:
+        if litter in substitute_what:
+            result += substitute_by[substitute_what.index(litter)]
+        else:
+            result += litter
+
+    return result
+
+
+def encode(plaintext):
+    return substitute(plaintext,alpha,key)
+
+def decode(ciphertext):
+    return substitute(ciphertext,key,alpha)
+
+#----------------------------------------------------
+
+ciphertext = 'kyv wzmv sfozex nzqriuj aldg hlztbcp'                             
+for i in range(26):                                                             
+    key  = alpha[i:] + alpha[:i]                                                
+    print(decode(ciphertext))                                                   
+                                                                                
+                              

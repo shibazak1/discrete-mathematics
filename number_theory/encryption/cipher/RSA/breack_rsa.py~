@@ -1,0 +1,17 @@
+
+def encrypt(message,modulo,exponent):
+    return pow()
+
+def DecipherSimple(ciphertext, modulo, exponent, potential_messages):
+    # Fix this implementation
+    if ciphertext == Encrypt(potential_messages[0], modulo, exponent):
+        return potential_messages[0]
+    return "don't know"
+
+
+modulo = 101
+exponent = 12
+ciphertext = Encrypt("attack", modulo, exponent)
+print(ciphertext)
+print(DecipherSimple(ciphertext, modulo, exponent,
+                      ["attack", "don't attack", "wait"]))
